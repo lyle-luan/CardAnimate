@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CardAnimate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJG-t7-9x9" userLabel="View4">
+                                <rect key="frame" x="200" y="150" width="200" height="300"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.79607843140000001" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Pvs-Ld-sMt"/>
+                                    <constraint firstAttribute="width" constant="200" id="zGa-wf-Jz6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmL-LA-sb4" userLabel="View3">
+                                <rect key="frame" x="200" y="650" width="200" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ESB-A5-Qqc"/>
+                                    <constraint firstAttribute="height" constant="300" id="d34-SZ-4Pr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjK-m7-lU5" userLabel="View2">
+                                <rect key="frame" x="200" y="650" width="200" height="300"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.85490196078431369" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="nx7-QQ-BrP"/>
+                                    <constraint firstAttribute="width" constant="200" id="qD5-UC-52K"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0r-io-EB4" userLabel="View1">
+                                <rect key="frame" x="200" y="650" width="200" height="300"/>
+                                <color key="backgroundColor" red="0.36470588235294116" green="1" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BJ6-JB-WIO"/>
+                                    <constraint firstAttribute="height" constant="300" id="sEs-n9-pAH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="GjK-m7-lU5" secondAttribute="centerX" id="0tA-ee-sbP"/>
+                            <constraint firstAttribute="centerX" secondItem="nmL-LA-sb4" secondAttribute="centerX" id="2fX-XX-lWq"/>
+                            <constraint firstAttribute="centerX" secondItem="nJG-t7-9x9" secondAttribute="centerX" id="9aY-sp-aWq"/>
+                            <constraint firstAttribute="centerY" secondItem="nmL-LA-sb4" secondAttribute="centerY" constant="-500" id="KvD-Eu-hNg"/>
+                            <constraint firstAttribute="centerY" secondItem="E0r-io-EB4" secondAttribute="centerY" constant="-500" id="KxV-0E-wlC"/>
+                            <constraint firstAttribute="centerX" secondItem="E0r-io-EB4" secondAttribute="centerX" id="XfM-Mf-sDL"/>
+                            <constraint firstAttribute="centerY" secondItem="nJG-t7-9x9" secondAttribute="centerY" id="YvB-9r-4eQ"/>
+                            <constraint firstAttribute="centerY" secondItem="GjK-m7-lU5" secondAttribute="centerY" constant="-500" id="mpk-A3-Twp"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="okf-8c-mo4" appends="YES" id="ASz-Tq-WbN"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="view1" destination="E0r-io-EB4" id="u0B-aU-zdO"/>
+                        <outlet property="view2" destination="GjK-m7-lU5" id="WR5-tQ-SRU"/>
+                        <outlet property="view3" destination="nmL-LA-sb4" id="VPn-85-FBn"/>
+                        <outlet property="view4" destination="nJG-t7-9x9" id="K8h-ge-K4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="okf-8c-mo4" userLabel="flipCard">
+                    <connections>
+                        <action selector="flipCard:" destination="vXZ-lx-hvc" id="K2C-dB-v7M"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
